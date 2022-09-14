@@ -1,4 +1,5 @@
 <script setup>
+  import "/src/style.css"
   import {ref, computed} from 'vue'
   import { useGameStore } from '@/stores/game'
   import Dice from '@/components/Dice.vue'
@@ -19,14 +20,16 @@
   </script>
   <template>
     <header>
+      <div className="form">
       <input type="text" v-model="newUser"> <button @click="addUser">+</button>
       <ul>
         <li v-for="(member, key) in listMembers" :key="key">
         {{ member }}</li>
       </ul>
+    </div>
       <div class="wrapper">
       
-        <h1>Joueurs</h1>
+       <h1>Joueurs :</h1>
         <Joueur v-for="(item, key) in listMembers" :key="key" :ident="key" @clickjoueur="parentjoueur"></Joueur>
       
       </div>
@@ -37,11 +40,18 @@
 
     </body>
   </template>
+
   <style scoped>
 
   header {
     line-height: 1.5;
     max-height: 100vh;
+  }
+
+  .form {
+    display: grid;
+    border: 1px solid red;
+    gap: 1rem;
   }
   .logo {
     display: block;
@@ -77,10 +87,15 @@
       margin: 0 2rem 0 0;
     }
     header .wrapper {
+      padding: 5rem;
       display: flex;
-      place-items: flex-start;
-      flex-wrap: wrap;
+      flex-direction: column;
+      
     }
+    header h1 {
+      display: inline;
+    }
+
     nav {
       text-align: left;
       margin-left: -1rem;

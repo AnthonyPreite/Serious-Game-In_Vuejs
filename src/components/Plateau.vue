@@ -51,7 +51,7 @@
     .cell {
         padding: 2rem;
         border-radius: 0.5rem;
-        box-shadow: 0px 0px 8px#00fd98;
+        box-shadow: 0px 0px 15px#a4a4a467;
     
     }
     </style>

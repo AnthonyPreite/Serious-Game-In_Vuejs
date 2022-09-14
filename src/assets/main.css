@@ -35,3 +35,16 @@ a,
     padding: 0 2rem;
   }
 }
+
+header{
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas: " h1 h1 " 
+                      " nameview nameview"
+  
+}
