@@ -1,9 +1,7 @@
 @import "./base.css";
 
 #app {
-  max-width: 1280px;
-  max-height: 1080px;
-  height: 720px;
+  max-width: 2800px;
   margin: 0 auto;
   padding: 2rem;
   background-color: #506275;

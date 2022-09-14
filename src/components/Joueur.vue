@@ -1,6 +1,6 @@
 <template>
     <div>
-    <h1>joueur{{ ident }}</h1>
+    <h1 className="playerdisplay">{{ theJoueur }} ({{ ident }})</h1>
     <a href="" @click.prevent="alertParent">Click me</a>
     </div>
 </template>
@@ -18,3 +18,14 @@ const alertParent = () => {
 }
 
 </script>
+
+<style scoped>
+.playerdisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 2rem;
+    padding: 1rem;
+}
+
+
+</style>

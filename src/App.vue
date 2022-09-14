@@ -3,6 +3,7 @@
   import { useGameStore } from '@/stores/game'
   import Dice from '@/components/Dice.vue'
   import Joueur from '@/components/Joueur.vue'
+  import Plateau from './components/Plateau.vue'
   const gameStore = useGameStore()
   const members = ['Pierre', 'Jean', 'Charles']
   gameStore.addMembers(members)
@@ -31,6 +32,7 @@
       </div>
     </header>
     <body>
+      <Plateau/>
       <Dice/>
 
     </body>
