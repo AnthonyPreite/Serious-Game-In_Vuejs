@@ -6,3 +6,7 @@
     <Timeur/>
   </main>
 </template>
+
+<style scoped>
+
+</style>

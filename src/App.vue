@@ -1,6 +1,7 @@
 <script setup>
   import {ref, computed} from 'vue'
   import { useGameStore } from '@/stores/game'
+  import Dice from '@/components/Dice.vue'
   import Joueur from '@/components/Joueur.vue'
   const gameStore = useGameStore()
   const members = ['Pierre', 'Jean', 'Charles']
@@ -9,6 +10,10 @@
   const newUser = ref('')
   const addUser = () => {
     gameStore.addAMember(newUser.value)
+  }
+
+  const parentjoueur = (value) => {
+    alert('click in joueur n° ' + value)
   }
   </script>
   <template>
@@ -21,13 +26,17 @@
       <div class="wrapper">
       
         <h1>Joueurs</h1>
-        <Joueur v-for="(item, key) in listMembers" :key="key" :ident="key"></Joueur>
+        <Joueur v-for="(item, key) in listMembers" :key="key" :ident="key" @clickjoueur="parentjoueur"></Joueur>
       
       </div>
     </header>
-    
+    <body>
+      <Dice/>
+
+    </body>
   </template>
   <style scoped>
+
   header {
     line-height: 1.5;
     max-height: 100vh;
