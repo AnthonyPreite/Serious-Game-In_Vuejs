@@ -1,0 +1,158 @@
+header {
+    line-height: 1.5;
+    max-height: 100vh;
+  }
+
+  input { 
+    width: 15rem;
+    color: #00bd7e;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px#00fd98;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem  ;
+    
+  }
+
+  .push {
+    border-radius: 0 0.5rem 0.5rem 0;
+    
+  }
+
+  .form {
+   gap: 1rem;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    padding-top: 1rem;
+    text-align: start;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 2rem;
+  }
+  nav {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  nav a.router-link-exact-active {
+    color: var(--color-text);
+  }
+  nav a.router-link-exact-active:hover {
+    background-color: transparent;
+  }
+  nav a {
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+  }
+  nav a:first-of-type {
+    border: 0;
+  }
+  @media (min-width: 1024px) {
+    header {
+      display: flex;
+      place-items: center;
+      padding-right: calc(var(--section-gap) / 2);
+    }
+    .logo {
+      margin: 0 2rem 0 0;
+    }
+    header .wrapper {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    header h1 {
+      display: inline;
+    }
+
+    nav {
+      text-align: left;
+      margin-left: -1rem;
+      font-size: 1rem;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+  }
+
+  /*plateau*/
+
+  .view {
+    display: flex;
+}
+.plate {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem
+}
+.cell {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 15px#a4a4a467;
+}
+
+/* Joueur */
+
+.playerdisplay {
+    display: grid;
+    margin: 1rem;
+    background-color: #ffffff;
+    color: #313131;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 2fr;
+    grid-auto-rows: 2fr;
+    padding: 1rem;
+    border: 1px solid #313131;
+    border-radius: 0.5rem;
+}
+
+.nameview {
+    background-color: #323e4a;
+    margin-top: 1rem;
+   /*border: 1px solid red;*/
+    border-radius: 0.5rem;
+    grid-area: "nameview";
+    
+}
+a {
+    display: block;
+    margin: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Dice */
+
+.btncomp {
+    border-radius: 0.5rem;
+    
+    box-shadow: 0px 4px 15px hsla(156, 100%, 50%, 0.68);
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-flex;
+    gap: 1rem;
+  }
+
+  button {
+    color: #00bd7e;
+    background-color: #00ff99;
+    box-shadow: 0px 0px 8px#00fd98;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  p {
+    color: #00bd7e;
+    font-family: "roboto-bold";
+    
+  }
+

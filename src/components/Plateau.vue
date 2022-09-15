@@ -1,7 +1,6 @@
 <script>
-    //import "/style.css";
     import axios from "axios";
-
+    import QcmM from './QcmM.vue'
     
     export default {
       data() {
@@ -10,6 +9,7 @@
         };
       },
       components: {
+        QcmM
 },
       mounted() {
         axios
@@ -32,26 +32,10 @@
         <div className="plate">
         <div className="cell" v-for="(question, key) in posts" :key="key">
           {{ question.number }}
+          <QcmM :sandy="question" v-if="question && question.qtype == 'form-multiple'"/>
         </div>
     </div>
       </div>
     </template>
 
-    <style scoped>
-
-    .view {
-        display: flex;
-    }
-    .plate {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 1.5rem;
-        padding: 2rem
-    }
-    .cell {
-        padding: 2rem;
-        border-radius: 0.5rem;
-        box-shadow: 0px 0px 15px#a4a4a467;
-    
-    }
-    </style>
+  
