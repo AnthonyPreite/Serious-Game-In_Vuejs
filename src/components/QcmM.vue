@@ -8,7 +8,7 @@
 <template>
     <div>
         <div>
-            <h3>{{sandy.question}}bite</h3>
+            <h3>{{sandy.question}}</h3>
         </div>
     </div>
 </template>
